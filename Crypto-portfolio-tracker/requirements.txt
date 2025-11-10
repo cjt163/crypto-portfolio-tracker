@@ -1,0 +1,16 @@
+# Core dependencies
+eth-brownie==1.19.5
+web3==5.31.3
+
+# Data handling
+pandas==2.0.0
+numpy==1.24.0
+requests==2.28.1
+
+# GUI
+matplotlib==3.7.0
+
+# Julia integration
+julia==0.6.2
+
+# Note: python-dotenv will be installed as a dependency of eth-brownie

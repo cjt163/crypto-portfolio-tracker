@@ -1,0 +1,5282 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getAllWallets",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_wallet",
+          "type": "address"
+        }
+      ],
+      "name": "getHoldings",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_btc",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_eth",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_sol",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_xrp",
+          "type": "uint256"
+        }
+      ],
+      "name": "setHoldings",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/PortfolioTracker.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/PortfolioTracker.sol",
+    "exportedSymbols": {
+      "PortfolioTracker": [
+        108
+      ]
+    },
+    "id": 109,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 108,
+        "linearizedBaseContracts": [
+          108
+        ],
+        "name": "PortfolioTracker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "PortfolioTracker.Holdings",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "mutability": "mutable",
+                "name": "btc",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "234:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "234:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "mutability": "mutable",
+                "name": "eth",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "267:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "267:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "mutability": "mutable",
+                "name": "sol",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "301:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "mutability": "mutable",
+                "name": "xrp",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "333:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "333:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Holdings",
+            "nodeType": "StructDefinition",
+            "scope": 108,
+            "src": "208:154:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 15,
+            "mutability": "mutable",
+            "name": "portfolios",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "421:47:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Holdings_$10_storage_$",
+              "typeString": "mapping(address => struct PortfolioTracker.Holdings)"
+            },
+            "typeName": {
+              "id": 14,
+              "keyType": {
+                "id": 11,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "429:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "421:28:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Holdings_$10_storage_$",
+                "typeString": "mapping(address => struct PortfolioTracker.Holdings)"
+              },
+              "valueType": {
+                "id": 13,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 12,
+                  "name": "Holdings",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 10,
+                  "src": "440:8:0"
+                },
+                "referencedDeclaration": 10,
+                "src": "440:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Holdings_$10_storage_ptr",
+                  "typeString": "struct PortfolioTracker.Holdings"
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 18,
+            "mutability": "mutable",
+            "name": "walletAddresses",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "525:33:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 16,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "525:7:0",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 17,
+              "nodeType": "ArrayTypeName",
+              "src": "525:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 22,
+            "mutability": "mutable",
+            "name": "isTracked",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "610:42:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 21,
+              "keyType": {
+                "id": 19,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "618:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "610:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 20,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "629:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 66,
+              "nodeType": "Block",
+              "src": "810:290:0",
+              "statements": [
+                {
+                  "condition": {
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "!",
+                    "prefix": true,
+                    "src": "877:22:0",
+                    "subExpression": {
+                      "baseExpression": {
+                        "id": 33,
+                        "name": "isTracked",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22,
+                        "src": "878:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 36,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 34,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "888:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 35,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "888:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "878:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 53,
+                  "nodeType": "IfStatement",
+                  "src": "873:127:0",
+                  "trueBody": {
+                    "id": 52,
+                    "nodeType": "Block",
+                    "src": "901:99:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "expression": {
+                                "id": 41,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -15,
+                                "src": "936:3:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 42,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "src": "936:10:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "id": 38,
+                              "name": "walletAddresses",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 18,
+                              "src": "915:15:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                                "typeString": "address[] storage ref"
+                              }
+                            },
+                            "id": 40,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "src": "915:20:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$__$",
+                              "typeString": "function (address)"
+                            }
+                          },
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "915:32:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 44,
+                        "nodeType": "ExpressionStatement",
+                        "src": "915:32:0"
+                      },
+                      {
+                        "expression": {
+                          "id": 50,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "baseExpression": {
+                              "id": 45,
+                              "name": "isTracked",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 22,
+                              "src": "961:9:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                                "typeString": "mapping(address => bool)"
+                              }
+                            },
+                            "id": 48,
+                            "indexExpression": {
+                              "expression": {
+                                "id": 46,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -15,
+                                "src": "971:3:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 47,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "src": "971:10:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "961:21:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "hexValue": "74727565",
+                            "id": 49,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "bool",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "985:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            "value": "true"
+                          },
+                          "src": "961:28:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "id": 51,
+                        "nodeType": "ExpressionStatement",
+                        "src": "961:28:0"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "id": 64,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 54,
+                        "name": "portfolios",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 15,
+                        "src": "1036:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Holdings_$10_storage_$",
+                          "typeString": "mapping(address => struct PortfolioTracker.Holdings storage ref)"
+                        }
+                      },
+                      "id": 57,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 55,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1047:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 56,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1047:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1036:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Holdings_$10_storage",
+                        "typeString": "struct PortfolioTracker.Holdings storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 59,
+                          "name": "_btc",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 24,
+                          "src": "1070:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 60,
+                          "name": "_eth",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 26,
+                          "src": "1076:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 61,
+                          "name": "_sol",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 28,
+                          "src": "1082:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 62,
+                          "name": "_xrp",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 30,
+                          "src": "1088:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 58,
+                        "name": "Holdings",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "1061:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Holdings_$10_storage_ptr_$",
+                          "typeString": "type(struct PortfolioTracker.Holdings storage pointer)"
+                        }
+                      },
+                      "id": 63,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1061:32:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Holdings_$10_memory_ptr",
+                        "typeString": "struct PortfolioTracker.Holdings memory"
+                      }
+                    },
+                    "src": "1036:57:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Holdings_$10_storage",
+                      "typeString": "struct PortfolioTracker.Holdings storage ref"
+                    }
+                  },
+                  "id": 65,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1036:57:0"
+                }
+              ]
+            },
+            "functionSelector": "5b648707",
+            "id": 67,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setHoldings",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24,
+                  "mutability": "mutable",
+                  "name": "_btc",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 67,
+                  "src": "745:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "745:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26,
+                  "mutability": "mutable",
+                  "name": "_eth",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 67,
+                  "src": "759:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 25,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "759:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28,
+                  "mutability": "mutable",
+                  "name": "_sol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 67,
+                  "src": "773:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "773:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30,
+                  "mutability": "mutable",
+                  "name": "_xrp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 67,
+                  "src": "787:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "787:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "744:56:0"
+            },
+            "returnParameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "810:0:0"
+            },
+            "scope": 108,
+            "src": "724:376:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 97,
+              "nodeType": "Block",
+              "src": "1275:101:0",
+              "statements": [
+                {
+                  "assignments": [
+                    82
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 82,
+                      "mutability": "mutable",
+                      "name": "h",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 97,
+                      "src": "1285:17:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Holdings_$10_memory_ptr",
+                        "typeString": "struct PortfolioTracker.Holdings"
+                      },
+                      "typeName": {
+                        "id": 81,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 80,
+                          "name": "Holdings",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 10,
+                          "src": "1285:8:0"
+                        },
+                        "referencedDeclaration": 10,
+                        "src": "1285:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Holdings_$10_storage_ptr",
+                          "typeString": "struct PortfolioTracker.Holdings"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 86,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 83,
+                      "name": "portfolios",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15,
+                      "src": "1305:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Holdings_$10_storage_$",
+                        "typeString": "mapping(address => struct PortfolioTracker.Holdings storage ref)"
+                      }
+                    },
+                    "id": 85,
+                    "indexExpression": {
+                      "id": 84,
+                      "name": "_wallet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 69,
+                      "src": "1316:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1305:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Holdings_$10_storage",
+                      "typeString": "struct PortfolioTracker.Holdings storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1285:39:0"
+                },
+                {
+                  "expression": {
+                    "components": [
+                      {
+                        "expression": {
+                          "id": 87,
+                          "name": "h",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 82,
+                          "src": "1342:1:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Holdings_$10_memory_ptr",
+                            "typeString": "struct PortfolioTracker.Holdings memory"
+                          }
+                        },
+                        "id": 88,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "btc",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 3,
+                        "src": "1342:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 89,
+                          "name": "h",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 82,
+                          "src": "1349:1:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Holdings_$10_memory_ptr",
+                            "typeString": "struct PortfolioTracker.Holdings memory"
+                          }
+                        },
+                        "id": 90,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "eth",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 5,
+                        "src": "1349:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 91,
+                          "name": "h",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 82,
+                          "src": "1356:1:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Holdings_$10_memory_ptr",
+                            "typeString": "struct PortfolioTracker.Holdings memory"
+                          }
+                        },
+                        "id": 92,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sol",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 7,
+                        "src": "1356:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 93,
+                          "name": "h",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 82,
+                          "src": "1363:1:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Holdings_$10_memory_ptr",
+                            "typeString": "struct PortfolioTracker.Holdings memory"
+                          }
+                        },
+                        "id": 94,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "xrp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 9,
+                        "src": "1363:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 95,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1341:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(uint256,uint256,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 79,
+                  "id": 96,
+                  "nodeType": "Return",
+                  "src": "1334:35:0"
+                }
+              ]
+            },
+            "functionSelector": "1be52dc4",
+            "id": 98,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getHoldings",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 69,
+                  "mutability": "mutable",
+                  "name": "_wallet",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 98,
+                  "src": "1199:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1199:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1198:17:0"
+            },
+            "returnParameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 98,
+                  "src": "1239:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 71,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 74,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 98,
+                  "src": "1248:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 73,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1248:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 76,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 98,
+                  "src": "1257:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 75,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1257:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 78,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 98,
+                  "src": "1266:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 77,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1266:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:36:0"
+            },
+            "scope": 108,
+            "src": "1178:198:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 106,
+              "nodeType": "Block",
+              "src": "1488:39:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 104,
+                    "name": "walletAddresses",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 18,
+                    "src": "1505:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                      "typeString": "address[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 103,
+                  "id": 105,
+                  "nodeType": "Return",
+                  "src": "1498:22:0"
+                }
+              ]
+            },
+            "functionSelector": "1bfa8601",
+            "id": 107,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllWallets",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 99,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1444:2:0"
+            },
+            "returnParameters": {
+              "id": 103,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 102,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 107,
+                  "src": "1470:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 100,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1470:7:0",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 101,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1470:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1469:18:0"
+            },
+            "scope": 108,
+            "src": "1422:105:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 109,
+        "src": "120:1409:0"
+      }
+    ],
+    "src": "32:1498:0"
+  },
+  "bytecode": "608060405234801561001057600080fd5b50610302806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80631be52dc4146100465780631bfa8601146100725780635b64870714610087575b600080fd5b610059610054366004610205565b61009c565b60405161006994939291906102b1565b60405180910390f35b61007a6100ed565b6040516100699190610264565b61009a610095366004610233565b61014f565b005b6001600160a01b031660009081526020818152604091829020825160808101845281548082526001830154938201849052600283015494820185905260039092015460609091018190529093919291565b6060600180548060200260200160405190810160405280929190818152602001828054801561014557602002820191906000526020600020905b81546001600160a01b03168152600190910190602001808311610127575b5050505050905090565b3360009081526002602052604090205460ff166101be576001805480820182557fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf60180546001600160a01b031916339081179091556000908152600260205260409020805460ff191690911790555b604080516080810182529485526020808601948552858201938452606086019283523360009081529081905220935184559151600184015551600283015551600390910155565b600060208284031215610216578081fd5b81356001600160a01b038116811461022c578182fd5b9392505050565b60008060008060808587031215610248578283fd5b5050823594602084013594506040840135936060013592509050565b6020808252825182820181905260009190848201906040850190845b818110156102a55783516001600160a01b031683529284019291840191600101610280565b50909695505050505050565b9384526020840192909252604083015260608201526080019056fea264697066735822122091902ec957265eb4ed4ad912168892e02f6e16d456e29a2e839fc873e8fa4ced64736f6c63430008000033",
+  "bytecodeSha1": "9ba096da81eb2852126c1362c57f667c62ebe3a6",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.0+commit.c7dfd78e"
+  },
+  "contractName": "PortfolioTracker",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "PortfolioTracker.setHoldings": {
+          "4": [
+            878,
+            899,
+            false
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "PortfolioTracker.getAllWallets": {
+          "0": [
+            1498,
+            1520
+          ]
+        },
+        "PortfolioTracker.setHoldings": {
+          "1": [
+            915,
+            947
+          ],
+          "2": [
+            961,
+            989
+          ],
+          "3": [
+            1036,
+            1093
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c80631be52dc4146100465780631bfa8601146100725780635b64870714610087575b600080fd5b610059610054366004610205565b61009c565b60405161006994939291906102b1565b60405180910390f35b61007a6100ed565b6040516100699190610264565b61009a610095366004610233565b61014f565b005b6001600160a01b031660009081526020818152604091829020825160808101845281548082526001830154938201849052600283015494820185905260039092015460609091018190529093919291565b6060600180548060200260200160405190810160405280929190818152602001828054801561014557602002820191906000526020600020905b81546001600160a01b03168152600190910190602001808311610127575b5050505050905090565b3360009081526002602052604090205460ff166101be576001805480820182557fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf60180546001600160a01b031916339081179091556000908152600260205260409020805460ff191690911790555b604080516080810182529485526020808601948552858201938452606086019283523360009081529081905220935184559151600184015551600283015551600390910155565b600060208284031215610216578081fd5b81356001600160a01b038116811461022c578182fd5b9392505050565b60008060008060808587031215610248578283fd5b5050823594602084013594506040840135936060013592509050565b6020808252825182820181905260009190848201906040850190845b818110156102a55783516001600160a01b031683529284019291840191600101610280565b50909695505050505050565b9384526020840192909252604083015260608201526080019056fea264697066735822122091902ec957265eb4ed4ad912168892e02f6e16d456e29a2e839fc873e8fa4ced64736f6c63430008000033",
+  "deployedSourceMap": "120:1409:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1178:198;;;;;;:::i;:::-;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;1422:105;;;:::i;:::-;;;;;;;:::i;724:376::-;;;;;;:::i;:::-;;:::i;:::-;;1178:198;-1:-1:-1;;;;;1305:19:0;1239:7;1305:19;;;;;;;;;;;;1285:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1178:198::o;1422:105::-;1470:16;1505:15;1498:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;1498:22:0;;;;;;;;;;;;;;;;;;;;;;;1422:105;:::o;724:376::-;888:10;878:21;;;;:9;:21;;;;;;;;873:127;;915:15;:32;;;;;;;;;;;-1:-1:-1;;;;;;915:32:0;936:10;915:32;;;;;;-1:-1:-1;961:21:0;;;:9;915:32;961:21;;;;:28;;-1:-1:-1;;961:28:0;;;;;;873:127;1061:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1047:10;-1:-1:-1;1036:22:0;;;;;;;;:57;;;;;;;;;;;;;;;;;;;;;724:376::o;14:306:1:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;178:23;;-1:-1:-1;;;;;230:31:1;;220:42;;210:2;;281:6;273;266:22;210:2;309:5;84:236;-1:-1:-1;;;84:236:1:o;325:395::-;;;;;488:3;476:9;467:7;463:23;459:33;456:2;;;510:6;502;495:22;456:2;-1:-1:-1;;538:23:1;;;608:2;593:18;;580:32;;-1:-1:-1;659:2:1;644:18;;631:32;;710:2;695:18;682:32;;-1:-1:-1;446:274:1;-1:-1:-1;446:274:1:o;725:661::-;896:2;948:21;;;1018:13;;921:18;;;1040:22;;;725:661;;896:2;1119:15;;;;1093:2;1078:18;;;725:661;1165:195;1179:6;1176:1;1173:13;1165:195;;;1244:13;;-1:-1:-1;;;;;1240:39:1;1228:52;;1335:15;;;;1300:12;;;;1276:1;1194:9;1165:195;;;-1:-1:-1;1377:3:1;;876:510;-1:-1:-1;;;;;;876:510:1:o;1391:391::-;1622:25;;;1678:2;1663:18;;1656:34;;;;1721:2;1706:18;;1699:34;1764:2;1749:18;;1742:34;1609:3;1594:19;;1576:206::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    120,
+    1529
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x1BE52DC4 EQ PUSH2 0x46 JUMPI DUP1 PUSH4 0x1BFA8601 EQ PUSH2 0x72 JUMPI DUP1 PUSH4 0x5B648707 EQ PUSH2 0x87 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x59 PUSH2 0x54 CALLDATASIZE PUSH1 0x4 PUSH2 0x205 JUMP JUMPDEST PUSH2 0x9C JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x69 SWAP5 SWAP4 SWAP3 SWAP2 SWAP1 PUSH2 0x2B1 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x7A PUSH2 0xED JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x69 SWAP2 SWAP1 PUSH2 0x264 JUMP JUMPDEST PUSH2 0x9A PUSH2 0x95 CALLDATASIZE PUSH1 0x4 PUSH2 0x233 JUMP JUMPDEST PUSH2 0x14F JUMP JUMPDEST STOP JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x20 DUP2 DUP2 MSTORE PUSH1 0x40 SWAP2 DUP3 SWAP1 KECCAK256 DUP3 MLOAD PUSH1 0x80 DUP2 ADD DUP5 MSTORE DUP2 SLOAD DUP1 DUP3 MSTORE PUSH1 0x1 DUP4 ADD SLOAD SWAP4 DUP3 ADD DUP5 SWAP1 MSTORE PUSH1 0x2 DUP4 ADD SLOAD SWAP5 DUP3 ADD DUP6 SWAP1 MSTORE PUSH1 0x3 SWAP1 SWAP3 ADD SLOAD PUSH1 0x60 SWAP1 SWAP2 ADD DUP2 SWAP1 MSTORE SWAP1 SWAP4 SWAP2 SWAP3 SWAP2 JUMP JUMPDEST PUSH1 0x60 PUSH1 0x1 DUP1 SLOAD DUP1 PUSH1 0x20 MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP3 DUP1 SLOAD DUP1 ISZERO PUSH2 0x145 JUMPI PUSH1 0x20 MUL DUP3 ADD SWAP2 SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 JUMPDEST DUP2 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 MSTORE PUSH1 0x1 SWAP1 SWAP2 ADD SWAP1 PUSH1 0x20 ADD DUP1 DUP4 GT PUSH2 0x127 JUMPI JUMPDEST POP POP POP POP POP SWAP1 POP SWAP1 JUMP JUMPDEST CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x2 PUSH1 0x20 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD PUSH1 0xFF AND PUSH2 0x1BE JUMPI PUSH1 0x1 DUP1 SLOAD DUP1 DUP3 ADD DUP3 SSTORE PUSH32 0xB10E2D527612073B26EECDFD717E6A320CF44B4AFAC2B0732D9FCBE2B7FA0CF6 ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND CALLER SWAP1 DUP2 OR SWAP1 SWAP2 SSTORE PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x2 PUSH1 0x20 MSTORE PUSH1 0x40 SWAP1 KECCAK256 DUP1 SLOAD PUSH1 0xFF NOT AND SWAP1 SWAP2 OR SWAP1 SSTORE JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x80 DUP2 ADD DUP3 MSTORE SWAP5 DUP6 MSTORE PUSH1 0x20 DUP1 DUP7 ADD SWAP5 DUP6 MSTORE DUP6 DUP3 ADD SWAP4 DUP5 MSTORE PUSH1 0x60 DUP7 ADD SWAP3 DUP4 MSTORE CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE SWAP1 DUP2 SWAP1 MSTORE KECCAK256 SWAP4 MLOAD DUP5 SSTORE SWAP2 MLOAD PUSH1 0x1 DUP5 ADD SSTORE MLOAD PUSH1 0x2 DUP4 ADD SSTORE MLOAD PUSH1 0x3 SWAP1 SWAP2 ADD SSTORE JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x216 JUMPI DUP1 DUP2 REVERT JUMPDEST DUP2 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x22C JUMPI DUP2 DUP3 REVERT JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x80 DUP6 DUP8 SUB SLT ISZERO PUSH2 0x248 JUMPI DUP3 DUP4 REVERT JUMPDEST POP POP DUP3 CALLDATALOAD SWAP5 PUSH1 0x20 DUP5 ADD CALLDATALOAD SWAP5 POP PUSH1 0x40 DUP5 ADD CALLDATALOAD SWAP4 PUSH1 0x60 ADD CALLDATALOAD SWAP3 POP SWAP1 POP JUMP JUMPDEST PUSH1 0x20 DUP1 DUP3 MSTORE DUP3 MLOAD DUP3 DUP3 ADD DUP2 SWAP1 MSTORE PUSH1 0x0 SWAP2 SWAP1 DUP5 DUP3 ADD SWAP1 PUSH1 0x40 DUP6 ADD SWAP1 DUP5 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x2A5 JUMPI DUP4 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP4 MSTORE SWAP3 DUP5 ADD SWAP3 SWAP2 DUP5 ADD SWAP2 PUSH1 0x1 ADD PUSH2 0x280 JUMP JUMPDEST POP SWAP1 SWAP7 SWAP6 POP POP POP POP POP POP JUMP JUMPDEST SWAP4 DUP5 MSTORE PUSH1 0x20 DUP5 ADD SWAP3 SWAP1 SWAP3 MSTORE PUSH1 0x40 DUP4 ADD MSTORE PUSH1 0x60 DUP3 ADD MSTORE PUSH1 0x80 ADD SWAP1 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SWAP2 SWAP1 0x2E 0xC9 JUMPI 0x26 0x5E 0xB4 0xED 0x4A 0xD9 SLT AND DUP9 SWAP3 0xE0 0x2F PUSH15 0x16D456E29A2E839FC873E8FA4CED64 PUSH20 0x6F6C634300080000330000000000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x41"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "SHR",
+      "path": "0"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x1BE52DC4"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x46"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x1BFA8601"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x72"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x5B648707"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x87"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "69": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        120,
+        1529
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "70": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "71": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x59"
+    },
+    "74": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x54"
+    },
+    "77": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "78": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "80": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x205"
+    },
+    "83": {
+      "fn": "PortfolioTracker.getHoldings",
+      "jump": "i",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "84": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "85": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9C"
+    },
+    "88": {
+      "fn": "PortfolioTracker.getHoldings",
+      "jump": "i",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "89": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "90": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "92": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "93": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x69"
+    },
+    "96": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "97": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "98": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "99": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "100": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "101": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2B1"
+    },
+    "104": {
+      "fn": "PortfolioTracker.getHoldings",
+      "jump": "i",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "105": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "106": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "108": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "109": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "110": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "111": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "112": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "113": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "114": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "115": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x7A"
+    },
+    "118": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xED"
+    },
+    "121": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "jump": "i",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "122": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "123": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "125": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "126": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x69"
+    },
+    "129": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "130": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "131": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x264"
+    },
+    "134": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "jump": "i",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "135": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "136": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9A"
+    },
+    "139": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x95"
+    },
+    "142": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "143": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "145": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x233"
+    },
+    "148": {
+      "fn": "PortfolioTracker.setHoldings",
+      "jump": "i",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "149": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "150": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x14F"
+    },
+    "153": {
+      "fn": "PortfolioTracker.setHoldings",
+      "jump": "i",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "154": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "155": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "156": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "157": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "159": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "161": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "163": {
+      "op": "SHL"
+    },
+    "164": {
+      "op": "SUB"
+    },
+    "165": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "166": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1239,
+        1246
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "168": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "169": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "170": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "171": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "173": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "174": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "175": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "176": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "178": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "179": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "180": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "181": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1305,
+        1324
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "182": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "183": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "184": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "186": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "187": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "188": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "189": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "190": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "191": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "192": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "193": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "194": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "195": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "197": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "198": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "199": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "200": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "201": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "202": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "203": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "204": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "205": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "206": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "208": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "209": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "210": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "211": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "212": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "213": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "214": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "215": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "216": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "217": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "219": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "220": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "221": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "222": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "223": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x60"
+    },
+    "225": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "226": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "227": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "228": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "229": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "230": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "231": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "232": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "233": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "234": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "235": {
+      "fn": "PortfolioTracker.getHoldings",
+      "offset": [
+        1285,
+        1324
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "236": {
+      "fn": "PortfolioTracker.getHoldings",
+      "jump": "o",
+      "offset": [
+        1178,
+        1376
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "237": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "238": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1470,
+        1486
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x60"
+    },
+    "240": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1505,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x1"
+    },
+    "242": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "243": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "244": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "245": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "247": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "248": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "250": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "251": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "253": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "254": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "255": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "256": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "257": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "259": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "260": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "261": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "262": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "263": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "264": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "265": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "266": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "267": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "269": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "270": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "271": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "272": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "273": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "274": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "275": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x145"
+    },
+    "278": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "279": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "281": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "282": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "283": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "284": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "285": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "286": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "288": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "289": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "291": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "293": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "294": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "295": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "296": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "297": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "298": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "300": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "302": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "304": {
+      "op": "SHL"
+    },
+    "305": {
+      "op": "SUB"
+    },
+    "306": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "307": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "308": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "309": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "311": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "312": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "313": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "314": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "315": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "317": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "318": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "319": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "320": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "321": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x127"
+    },
+    "324": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "325": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "326": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "327": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "328": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "329": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "330": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "331": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "332": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1498,
+        1520
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "333": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "334": {
+      "fn": "PortfolioTracker.getAllWallets",
+      "jump": "o",
+      "offset": [
+        1422,
+        1527
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "335": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "336": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        888,
+        898
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "337": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "339": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "340": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "341": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "342": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        887
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "344": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "346": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "347": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "349": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "350": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "351": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "352": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "354": {
+      "branch": 4,
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        878,
+        899
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "355": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        873,
+        1000
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1BE"
+    },
+    "358": {
+      "branch": 4,
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        873,
+        1000
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "359": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        930
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x1"
+    },
+    "361": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "362": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "363": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "364": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "365": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "366": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "367": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "368": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0xB10E2D527612073B26EECDFD717E6A320CF44B4AFAC2B0732D9FCBE2B7FA0CF6"
+    },
+    "401": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "402": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "403": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "404": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "406": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "408": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "410": {
+      "op": "SHL"
+    },
+    "411": {
+      "op": "SUB"
+    },
+    "412": {
+      "op": "NOT"
+    },
+    "413": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "414": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        936,
+        946
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "415": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "416": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "417": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "418": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "419": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "420": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "421": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "423": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        982
+      ],
+      "op": "SWAP1",
+      "path": "0",
+      "statement": 2
+    },
+    "424": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        982
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "425": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        982
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "426": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        970
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "428": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        915,
+        947
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "430": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        982
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "431": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        982
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "433": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        982
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "434": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        982
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "435": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "436": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "437": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "439": {
+      "op": "NOT"
+    },
+    "440": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "441": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "442": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "443": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "444": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "445": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        961,
+        989
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "446": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        873,
+        1000
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "447": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x40"
+    },
+    "449": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "450": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "451": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "453": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "454": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "455": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "456": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "457": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "458": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "459": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "460": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "462": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "463": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP7",
+      "path": "0"
+    },
+    "464": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "465": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "SWAP5",
+      "path": "0"
+    },
+    "466": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "467": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "468": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "469": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "470": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "471": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "472": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "473": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "474": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x60"
+    },
+    "476": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP7",
+      "path": "0"
+    },
+    "477": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "478": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "479": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "480": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1061,
+        1093
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "481": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1047,
+        1057
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "482": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "484": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "485": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "486": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "487": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "488": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "489": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "490": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "491": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1058
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "492": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "493": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "494": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "495": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "496": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "497": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "498": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "500": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "501": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "502": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "503": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "504": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "506": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "507": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "508": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "509": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "510": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "512": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "513": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "514": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "515": {
+      "fn": "PortfolioTracker.setHoldings",
+      "offset": [
+        1036,
+        1093
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "516": {
+      "fn": "PortfolioTracker.setHoldings",
+      "jump": "o",
+      "offset": [
+        724,
+        1100
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "517": {
+      "op": "JUMPDEST"
+    },
+    "518": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "520": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "522": {
+      "op": "DUP3"
+    },
+    "523": {
+      "op": "DUP5"
+    },
+    "524": {
+      "op": "SUB"
+    },
+    "525": {
+      "op": "SLT"
+    },
+    "526": {
+      "op": "ISZERO"
+    },
+    "527": {
+      "op": "PUSH2",
+      "value": "0x216"
+    },
+    "530": {
+      "op": "JUMPI"
+    },
+    "531": {
+      "op": "DUP1"
+    },
+    "532": {
+      "op": "DUP2"
+    },
+    "533": {
+      "op": "REVERT"
+    },
+    "534": {
+      "op": "JUMPDEST"
+    },
+    "535": {
+      "op": "DUP2"
+    },
+    "536": {
+      "op": "CALLDATALOAD"
+    },
+    "537": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "539": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "541": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "543": {
+      "op": "SHL"
+    },
+    "544": {
+      "op": "SUB"
+    },
+    "545": {
+      "op": "DUP2"
+    },
+    "546": {
+      "op": "AND"
+    },
+    "547": {
+      "op": "DUP2"
+    },
+    "548": {
+      "op": "EQ"
+    },
+    "549": {
+      "op": "PUSH2",
+      "value": "0x22C"
+    },
+    "552": {
+      "op": "JUMPI"
+    },
+    "553": {
+      "op": "DUP2"
+    },
+    "554": {
+      "op": "DUP3"
+    },
+    "555": {
+      "op": "REVERT"
+    },
+    "556": {
+      "op": "JUMPDEST"
+    },
+    "557": {
+      "op": "SWAP4"
+    },
+    "558": {
+      "op": "SWAP3"
+    },
+    "559": {
+      "op": "POP"
+    },
+    "560": {
+      "op": "POP"
+    },
+    "561": {
+      "op": "POP"
+    },
+    "562": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "563": {
+      "op": "JUMPDEST"
+    },
+    "564": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "566": {
+      "op": "DUP1"
+    },
+    "567": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "569": {
+      "op": "DUP1"
+    },
+    "570": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "572": {
+      "op": "DUP6"
+    },
+    "573": {
+      "op": "DUP8"
+    },
+    "574": {
+      "op": "SUB"
+    },
+    "575": {
+      "op": "SLT"
+    },
+    "576": {
+      "op": "ISZERO"
+    },
+    "577": {
+      "op": "PUSH2",
+      "value": "0x248"
+    },
+    "580": {
+      "op": "JUMPI"
+    },
+    "581": {
+      "op": "DUP3"
+    },
+    "582": {
+      "op": "DUP4"
+    },
+    "583": {
+      "op": "REVERT"
+    },
+    "584": {
+      "op": "JUMPDEST"
+    },
+    "585": {
+      "op": "POP"
+    },
+    "586": {
+      "op": "POP"
+    },
+    "587": {
+      "op": "DUP3"
+    },
+    "588": {
+      "op": "CALLDATALOAD"
+    },
+    "589": {
+      "op": "SWAP5"
+    },
+    "590": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "592": {
+      "op": "DUP5"
+    },
+    "593": {
+      "op": "ADD"
+    },
+    "594": {
+      "op": "CALLDATALOAD"
+    },
+    "595": {
+      "op": "SWAP5"
+    },
+    "596": {
+      "op": "POP"
+    },
+    "597": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "599": {
+      "op": "DUP5"
+    },
+    "600": {
+      "op": "ADD"
+    },
+    "601": {
+      "op": "CALLDATALOAD"
+    },
+    "602": {
+      "op": "SWAP4"
+    },
+    "603": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "605": {
+      "op": "ADD"
+    },
+    "606": {
+      "op": "CALLDATALOAD"
+    },
+    "607": {
+      "op": "SWAP3"
+    },
+    "608": {
+      "op": "POP"
+    },
+    "609": {
+      "op": "SWAP1"
+    },
+    "610": {
+      "op": "POP"
+    },
+    "611": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "612": {
+      "op": "JUMPDEST"
+    },
+    "613": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "615": {
+      "op": "DUP1"
+    },
+    "616": {
+      "op": "DUP3"
+    },
+    "617": {
+      "op": "MSTORE"
+    },
+    "618": {
+      "op": "DUP3"
+    },
+    "619": {
+      "op": "MLOAD"
+    },
+    "620": {
+      "op": "DUP3"
+    },
+    "621": {
+      "op": "DUP3"
+    },
+    "622": {
+      "op": "ADD"
+    },
+    "623": {
+      "op": "DUP2"
+    },
+    "624": {
+      "op": "SWAP1"
+    },
+    "625": {
+      "op": "MSTORE"
+    },
+    "626": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "628": {
+      "op": "SWAP2"
+    },
+    "629": {
+      "op": "SWAP1"
+    },
+    "630": {
+      "op": "DUP5"
+    },
+    "631": {
+      "op": "DUP3"
+    },
+    "632": {
+      "op": "ADD"
+    },
+    "633": {
+      "op": "SWAP1"
+    },
+    "634": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "636": {
+      "op": "DUP6"
+    },
+    "637": {
+      "op": "ADD"
+    },
+    "638": {
+      "op": "SWAP1"
+    },
+    "639": {
+      "op": "DUP5"
+    },
+    "640": {
+      "op": "JUMPDEST"
+    },
+    "641": {
+      "op": "DUP2"
+    },
+    "642": {
+      "op": "DUP2"
+    },
+    "643": {
+      "op": "LT"
+    },
+    "644": {
+      "op": "ISZERO"
+    },
+    "645": {
+      "op": "PUSH2",
+      "value": "0x2A5"
+    },
+    "648": {
+      "op": "JUMPI"
+    },
+    "649": {
+      "op": "DUP4"
+    },
+    "650": {
+      "op": "MLOAD"
+    },
+    "651": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "653": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "655": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "657": {
+      "op": "SHL"
+    },
+    "658": {
+      "op": "SUB"
+    },
+    "659": {
+      "op": "AND"
+    },
+    "660": {
+      "op": "DUP4"
+    },
+    "661": {
+      "op": "MSTORE"
+    },
+    "662": {
+      "op": "SWAP3"
+    },
+    "663": {
+      "op": "DUP5"
+    },
+    "664": {
+      "op": "ADD"
+    },
+    "665": {
+      "op": "SWAP3"
+    },
+    "666": {
+      "op": "SWAP2"
+    },
+    "667": {
+      "op": "DUP5"
+    },
+    "668": {
+      "op": "ADD"
+    },
+    "669": {
+      "op": "SWAP2"
+    },
+    "670": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "672": {
+      "op": "ADD"
+    },
+    "673": {
+      "op": "PUSH2",
+      "value": "0x280"
+    },
+    "676": {
+      "op": "JUMP"
+    },
+    "677": {
+      "op": "JUMPDEST"
+    },
+    "678": {
+      "op": "POP"
+    },
+    "679": {
+      "op": "SWAP1"
+    },
+    "680": {
+      "op": "SWAP7"
+    },
+    "681": {
+      "op": "SWAP6"
+    },
+    "682": {
+      "op": "POP"
+    },
+    "683": {
+      "op": "POP"
+    },
+    "684": {
+      "op": "POP"
+    },
+    "685": {
+      "op": "POP"
+    },
+    "686": {
+      "op": "POP"
+    },
+    "687": {
+      "op": "POP"
+    },
+    "688": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "689": {
+      "op": "JUMPDEST"
+    },
+    "690": {
+      "op": "SWAP4"
+    },
+    "691": {
+      "op": "DUP5"
+    },
+    "692": {
+      "op": "MSTORE"
+    },
+    "693": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "695": {
+      "op": "DUP5"
+    },
+    "696": {
+      "op": "ADD"
+    },
+    "697": {
+      "op": "SWAP3"
+    },
+    "698": {
+      "op": "SWAP1"
+    },
+    "699": {
+      "op": "SWAP3"
+    },
+    "700": {
+      "op": "MSTORE"
+    },
+    "701": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "703": {
+      "op": "DUP4"
+    },
+    "704": {
+      "op": "ADD"
+    },
+    "705": {
+      "op": "MSTORE"
+    },
+    "706": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "708": {
+      "op": "DUP3"
+    },
+    "709": {
+      "op": "ADD"
+    },
+    "710": {
+      "op": "MSTORE"
+    },
+    "711": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "713": {
+      "op": "ADD"
+    },
+    "714": {
+      "op": "SWAP1"
+    },
+    "715": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "2c6f800505f7d5ee6a772f3ea165bf7269e3c3aa",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\n// Track cryptocurrency holdings for multiple wallet addresses\ncontract PortfolioTracker {\n    // Struct to store holdings for each cryptocurrency\n    struct Holdings {\n        uint256 btc;  // Bitcoin\n        uint256 eth;  // Ethereum\n        uint256 sol;  // Solana\n        uint256 xrp;  // Ripple\n    }\n\n    // Mapping from wallet address to their holdings\n    mapping(address => Holdings) private portfolios;\n    // Array to keep track of all wallet addresses\n    address[] private walletAddresses;\n    // Check if an address is already tracked\n    mapping(address => bool) private isTracked;\n\n    // Set holdings for the caller's wallet (BTC, ETH, SOL, XRP)\n    function setHoldings(uint256 _btc, uint256 _eth, uint256 _sol, uint256 _xrp) external {\n        // Add to wallet list if not already tracked\n        if (!isTracked[msg.sender]) {\n            walletAddresses.push(msg.sender);\n            isTracked[msg.sender] = true;\n        }\n        // Update holdings\n        portfolios[msg.sender] = Holdings(_btc, _eth, _sol, _xrp);\n    }\n\n    // Get holdings for a specific wallet, returns (btc, eth, sol, xrp)\n    function getHoldings(address _wallet) external view returns (uint256, uint256, uint256, uint256) {\n        Holdings memory h = portfolios[_wallet];\n        return (h.btc, h.eth, h.sol, h.xrp);\n    }\n\n    // Get all tracked wallet addresses\n    function getAllWallets() external view returns (address[] memory) {\n        return walletAddresses;\n    }\n}\n",
+  "sourceMap": "120:1409:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/PortfolioTracker.sol",
+  "type": "contract"
+}
